@@ -1,6 +1,6 @@
 {
     "name": "gibi",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "description": "Gibi dizisi repliklerini rastgele gösterir.",
     "main": "build/index.js",
     "bin": "build/index.js",

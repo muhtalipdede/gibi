@@ -13,3 +13,10 @@ const shebang = "#!/usr/bin/env node";
 const newMainFileContent = `${shebang}
 ${mainFileContent}`;
 fs.writeFileSync(mainFile, newMainFileContent);
+
+const assetsSrcDir = path.join(__dirname, "./src/assets");
+const assetsBuildDir = path.join(__dirname, "./build/assets");
+fs.mkdirSync(assetsBuildDir, { recursive: true });
+fs.readdirSync(assetsSrcDir).forEach((file) => {
+    fs.copyFileSync(path.join(assetsSrcDir, file), path.join(assetsBuildDir, file));
+});

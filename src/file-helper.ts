@@ -10,11 +10,17 @@ export class FileHelper {
     }
 
     read(randomNumber: number) {
-        const projectRoot = process.cwd();
-        const filePath = `${projectRoot}/src/assets/gibi.csv`;
+        const filePath = __dirname + `/assets/gibi.csv`;
         const fileContent = fs.readFileSync(filePath, 'utf-8');
         const parsedFile = this.csvParser(fileContent);
         const randomLine = parsedFile[randomNumber][0].split(';')[1];
         return randomLine;
+    }
+
+    length() {
+        const filePath = __dirname + `/assets/gibi.csv`;
+        const fileContent = fs.readFileSync(filePath, 'utf-8');
+        const parsedFile = this.csvParser(fileContent);
+        return parsedFile.length;
     }
 }
