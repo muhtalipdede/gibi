@@ -1,6 +1,6 @@
 {
     "name": "gibi",
-    "version": "1.0.3",
+    "version": "1.0.5",
     "description": "Gibi dizisi repliklerini rastgele gösterir.",
     "main": "build/index.js",
     "bin": "build/index.js",
@@ -24,6 +24,10 @@
         "prettier": "2.8.0",
         "rimraf": "^3.0.2",
         "ts-node": "^10.9.1"
+    },
+    "dependencies": {
+        "@clack/prompts": "^0.2.0",
+        "picocolors": "^1.0.0"
     },
     "repository": {
         "type": "git",
